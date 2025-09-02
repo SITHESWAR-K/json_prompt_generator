@@ -1,3 +1,6 @@
+body{
+  background-color: #F4F5F7;
+}
 .chat-input-container {
   position: fixed;
   bottom: 20px;
@@ -41,4 +44,13 @@
   position: relative;
   width: 75px;
   height: 75px;
+}
+
+.caution{
+  position: fixed;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  width: 100%;
 }

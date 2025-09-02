@@ -4,7 +4,6 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { Link } from "react-router-dom"
 function Jsonprompt() {
   const [userprompt,setuserprompt] = useState('')
   const [loading,setloading] = useState(false)
@@ -50,11 +49,9 @@ function Jsonprompt() {
   
   return (
     <div>
-      {/* <Link to={"/"} className='btn btn-secondary m-3'>Back</Link> */}
-      {/* <ScrollToBottomButton/> */}
       <br />
-      <div className='site-name text-center'>
-        <span className="rec-text">REC</span><span className="db-text">AI</span>
+      <div className='text-center'>
+        <span className='text-primary fs-3 fw-bold'>JSON PROMPT GENERATOR </span>
       </div>
       <div className='chat-input-container'>
         <input type="text" value={userprompt} onChange={Handlesetprompt} onKeyDown={Handleenter} placeholder='Ask Anything' /> 
@@ -100,7 +97,7 @@ function Jsonprompt() {
       </div>)}
       {!history && <div className='text-center mt-5 text-secondary'>Your chat is not saved and will disappear if you reload or leave the page. <br />
 This is a temporary session – no data is stored.</div>}
-      <div  className='text-center text-secondary caution'> RECAI may make mistakes. Check important info. </div>
+      <div  className='text-center text-secondary caution'> AI may make mistakes. Check important info. </div>
       <div ref={targetRef}></div>
     </div>
   )
